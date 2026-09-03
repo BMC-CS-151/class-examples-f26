@@ -1,4 +1,4 @@
-public class NegativeIdException extends Exception {
+public class NegativeIdException extends RuntimeException {
 
   public NegativeIdException(String msg) {
     super(msg);

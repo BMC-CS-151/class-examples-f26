@@ -5,6 +5,6 @@ public class Main {
 
 		acc.deposit(100);
 
-		System.out.println(acc.balance);
+		System.out.println(acc.balance); //acc.getBalance();
 	}
 }	

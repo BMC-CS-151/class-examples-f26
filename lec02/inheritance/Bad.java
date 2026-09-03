@@ -1,13 +1,16 @@
-public class Student {
+public class CSStudent {
   private String name;
   private int id;
+    private Stirng username;
 
-  public Student(String name, int id) {
+  public CSStudent(String name, int id, String username) {
     this.name = name;
+
     if (id < 0) {
-        throw new NegativeIdException("you cant have an id less than zero");
+            //throw exception
     }
     this.id = id;
+    this.username = username;
   }
 
   public Student() {
@@ -24,7 +27,7 @@ public class Student {
   }
 
   public String toString() {
-    return name + " " + id;
+    return name+" "+id;
   }
 
   public static void main(String[] args) {
