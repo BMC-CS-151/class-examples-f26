@@ -19,15 +19,18 @@ public class Warmup {
 
     }
 
+    //bug fix 
+    private static boolean isBST(Node n, Comparable min, Comparable max) {
+        if (n == null) return true;
+
+        if (min != null && n.element.compareTo(min) <= 0) return false;
+        if (max != null && n.element.compareTo(max) >= 0) return false;
+
+        return isBST(n.left, min, n.element) && isBST(n.right, n.element, max);
+    }
+
     public static boolean isBST(Node n) {
-            if (n == null) return true; 
-            if (n.left != null && n.left.element.compareTo(n.element) > 0) {
-                return false;
-            }
-            if (n.right != null && n.right.element.compareTo(n.element) < 0) {
-                return false;
-            }
-            return isBST(n.left) && isBST(n.right);
+        return isBST(n, null, null);
     }
 
     public void IOT(Node n) {
